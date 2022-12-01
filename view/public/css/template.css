@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Quicksand');
+
+/******** TEMPLATE ********/
+
+* {
+	font-family: "Quicksand", sans-serif;
+	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+
+	margin:0;
+	padding: 0;
+	height : 100%;
+	width : 100%;
+	overflow: hidden;
+	background-color:#5F5DFE;
+}
+
+/** toute la page web **/
+#pages {
+	display: flex;
+	justify-content: flex-end;
+	height: 100%
+}
+
+.deconnexion {
+	text-decoration : none;
+	color : #5F5DFE;
+}
+
+.deconnexion:hover {
+	text-decoration : underline;
+	color : #4543DF;
+}
+
+
+/******** PAGE PRINCIPALE ********/
+
+/** boîte page principale **/
+#page_principale {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height : 100vh;
+	width : 100%;
+	margin-left: 273px;
+	overflow: hidden;
+	border-radius: 40px 0 0 40px;
+	box-shadow: 0px 0px 40px rgba(0,0,0, 0.15);
+	background-color : #F9F9F9;
+}
+
+/** PAGE TEXTE **/
+.conteneur_principal {
+
+	display : flex;
+	flex-direction: column;
+	height: 100%;
+	width : 1200px;
+	margin: 0;
+	overflow-y: scroll;
+}
+
+/** flexbox page divisée en 2 **/
+.conteneur_principal_double {
+  display: flex;
+  height: 100vh;
+  width: 1500px;
+  margin: 0;
+  overflow-y: scroll;
+}
+
+/** flexbox page de gauche **/
+.page_left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/** flexbox page de droite **/
+.page_right {
+  width: 50%;
+  background: #F4F4F4;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/** media queries page principale **/
+
+@media only screen and (max-width:700px) {
+  .conteneur_principal_double{
+    display : block;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow-y: scroll;
+  }
+  .page_left{
+    display:none;
+  }
+  .page_right{
+    background-color : #F9F9F9;
+    height:100%;
+    width: 100%;
+    margin: 0;
+    overflow-y: scroll;
+  }
+}
+@media only screen and (max-width:1430px) {
+
+	/** PAGE TEXTE **/
+  .conteneur_principal {
+    width: 90%;
+    padding: 0;
+  }
+  .conteneur_principal_double{
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width:1430px) {
+
+	/** PAGE TEXTE **/
+  .conteneur_principal {
+    width: 1200px;
+    padding: 0 600px;
+  }
+  .conteneur_principal_double{
+    width: 100%;
+    padding:0;
+  }
+}
+
+/******** MENU DE NAVIGATION ********/
+
+
+/** menu hamburger **/
+label.hamburger {
+  margin: 0;
+  font-size: 26px;
+  line-height: 84px;
+  position: absolute;
+  left: 35px;
+  display: none;
+  z-index: 7;
+  color: #4543DF;
+}
+
+/** checkbox cachée **/
+#toggle {
+  display: none;
+}
+
+/** media queries pour gérer le menu hamburger et la page générale **/
+@media only screen and (max-width:1430px) {
+  label.hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  #page_principale, #homepage-conteneur {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  #menu, .menulogo {
+    display: none;
+  }
+
+  #toggle:checked + #menu {
+    display: flex;
+    z-index: 6;
+    background: #5F5DFE;
+  }
+
+  #menuheader {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (min-width:1430px) {
+  #menu {
+    display: flex
+  }
+}
+
+/** boîte menu de navigation (fixe) **/
+#menu {
+
+	height : 100%;
+	width : 273px;
+	margin : 0;
+	position: fixed;
+	z-index:2;
+	left: 0;
+	top: 0;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: center;
+	overflow-x: hidden;
+	padding-top: 36px;
+}
+
+/** liens de navigation **/
+nav {
+	margin-top: 30px;
+}
+
+/** icônes du menu **/
+.menuicon {
+  margin-right: 20px;
+  padding-top: 1px;
+  width: auto;
+  height: 23px;
+}
+
+/** texte du menu de navigation **/
+.element_menu a {
+	display: flex;
+	box-sizing: border-box;
+	padding: 12px 0 0 35px;
+	width : 240px;
+	height: 50px;
+	text-decoration: none;
+	margin: 0 0 40px 20px;
+	font-size : 22px;
+	color : #fff;
+	font-weight : bold;
+  font-family: "Quicksand", sans-serif;
+	border-radius: 50px;
+	cursor:pointer;
+	opacity: 40%;
+	text-align: left;
+	transition-property: background-color;
+  transition-duration: 0.2s;
+}
+
+
+/** texte du menu quand on passe la souris dessus **/
+.element_menu a:hover{
+
+	background-color: rgba(255, 255, 255, 0.1);
+  	opacity:100%;
+}
+
+/** conteneur cgu et copyright **/
+.bas-menu {
+	margin-bottom: 46px;
+  display: flex;
+  justify-content: center;
+}
+
+/** cgu et copyright **/
+.bas-menu h6, .bas-menu a {
+
+	font-size: 13px;
+	color: #fff;
+  opacity: 70%;
+	margin: 0 10px;
+	padding: 10px;
+	border-radius: 12px;
+	transition-property: background-color;
+	transition-duration: 0.2s;
+
+}
+
+/** cgu **/
+.bas-menu a {
+	text-decoration: underline;
+}
+
+/** cgu quand on passe la souris dessus **/
+.bas-menu a:hover {
+	background-color:  rgba(255, 255, 255, 0.1);
+}
+
+/** enlève le rectangle autour des formulaires et des listes déroulantes **/
+.formulaire,select:focus{
+	outline : none;
+}
+
+/* ===============	Header	================= */
+
+.boutonlogin {
+  font-weight: bold;
+  align-self: center;
+  width: 120px;
+  height: 22px;
+  background-color: #5F5DFE;
+  color: #fff;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: center;
+  text-decoration:none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 5px;
+  cursor: pointer;
+  border-radius:40px;
+  border: 2px solid rgba(255, 255, 255, 0);
+  transition: background-color 0.3s ease;
+	margin-bottom: 27px;
+}
+
+.boutonlogin:hover {
+  background-color: #4543DF;
+}
+
+/** flexbox menu du haut **/
+#conteneur_menuhaut {
+	height: 86px;
+	width: 1400px;
+	display: flex;
+	justify-content: space-between;
+}
+
+/** bouton connexion **/
+.texte_menuhaut {
+	box-sizing: border-box;
+	background-color : #5F5DFE;
+	color : #fff;
+  text-decoration: none;
+	font-family:'Quicksand', sans-serif;
+	border : 2px solid #605dfe00;
+	border-radius : 30px;
+	cursor:pointer;
+	font-size : 15px;
+	box-shadow: 0px 0px 40px rgba(0,0,0, 0.05);
+	margin: 23px 100px;
+	margin-left: 100px;
+	padding-top: 8px;
+	height: 40px;
+  width:120px;
+	z-index: 2;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.texte_menuhaut:hover {
+
+	background-color :#4845e6;
+	color : #F2F1FF;
+	transition-duration: 0.4s;
+}
+
+
+/** media queries **/
+@media only screen and (max-width:1430px) {
+
+  /** Affichage profil connecté et inscription ou connection (pour la page visiteur) **/
+  #headerprofile, .texte_menuhaut {
+    position: absolute;
+    right: -60px;
+  }
+
+	#headerlogin {
+		position: absolute;
+		right: -100px;
+	}
+
+	#conteneur_menuhaut {
+		justify-content: center;
+	}
+
+}
+
+@media only screen and (max-width:700px) {
+
+	/** Affichage profil connecté **/
+  .headername, #headerprofile h4, #headerprofile h5 {
+    display: none;
+  }
+
+	#headerlogin {
+		position: absolute;
+		right: -100px;
+	}
+
+	#conteneur_menuhaut {
+		justify-content: center;
+	}
+
+}
+
+#menu_haut {
+	width: 100%;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+}
+
+/** pour la page d'acceuil **/
+#header {
+  height: 100vh;
+}
+
+/** affichage connexion inscription **/
+#headerlogin {
+  display: flex;
+  justify-content: space-between;
+  height: 66px;
+  width: 250px;
+  padding-top: 20px;
+  padding-left: 0px;
+}
+
+/** titre de la page **/
+#menu_haut h3 {
+  font-size: 25px;
+  color: black;
+}
+
+/** affichage profil connecté **/
+#headerprofile {
+  height: 86px;
+  width: 250px;
+  padding-right: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/** Nom dans le profil et role **/
+.headername {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-right: 12px;
+  text-align: right;
+}
+
+/** Rond pour dire qu'il est connecté **/
+#headerprofile::after {
+  display: block;
+  content: "";
+  position: absolute;
+  background: #76CE9B;
+  height: 15px;
+  width: 15px;
+  transform: translate(5px, 20px);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/** Prenom dans le profil connecté **/
+#headerprofile h4 {
+  font-size: 18px;
+  margin: 0;
+}
+
+/** Role dans le profil connecté **/
+#headerprofile h5 {
+  font-size: 12px;
+  color:rgb(141, 141, 141);
+  font-weight: lighter;
+  margin: 0;
+}
+
+/** image de profil **/
+#headerprofile svg {
+  cursor: pointer;
+}
+
+/* ===============	Langue	================= */
+
+/** selecteur de langue **/
+#conteneur_menuhaut select {
+  background-color: #5F5DFE;
+  border-radius: 30px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  height: 40px;
+  width: 150px;
+	margin: 23px 100px;
+	padding-left: 30px;
+	margin-right: 100px;
+  padding-right: 0;
+	position: relative;
+  z-index: 2;
+	font-size: 15px;
+  font-weight: bold;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="white" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>');
+  background-position: right 18px top 50%;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+
+/** media queries **/
+@media only screen and (max-width:700px) {
+
+	/** selecteur de langue **/
+  #conteneur_menuhaut select {
+    display: none;
+  }
+}
+
+@media only screen and (min-width:700px) and (max-width:1430px) {
+
+	/** selecteur de langue **/
+  #conteneur_menuhaut select {
+		left : 0;
+		position: absolute;
+  }
+}
+
+
+/* ===============	Titre Pages	================= */
+
+/** Titre dans une page mais pas le titre principal (ex: Résultats ou Historique Résultats) **/
+.conteneur_principal h4 {
+  margin: 50px 0 20px 0;
+  padding: 0;
+  font-size: 30px;
+}
+
+/** Texte rectangle blanc : titre **/
+.pagetitle h1, .pagetitlebis h1 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+
+/** Texte rectangle blanc : description **/
+.pagetitle h6, .pagetitlebis h2 {
+  color:rgb(141, 141, 141);
+  font-weight: lighter;
+  font-size: 1.2em;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/** Rectangle blanc (titre page) **/
+.pagetitle {
+	box-shadow: 0px 0px 40px rgba(0,0,0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 30px;
+  height: 170px;
+}
+
+/** Svg rectangle blanc **/
+.pagetitleimage {
+  margin-top: -55px;
+  margin-bottom: 10px;
+}
+
+.pagetitleimage svg {
+  height: 220px;
+}
+
+/** Texte rectangle blanc **/
+.pagetitletext {
+  width: 500px;
+}
+
+.pagetitlebis{
+  display:none;
+}
+
+@media only screen and (max-width:1200px) {
+
+	/** Svg rectangle blanc **/
+  .pagetitleimage {
+    margin-right: -60px;
+  }
+
+}
+
+@media only screen and (max-width:700px) {
+	/** Texte rectangle blanc : titre **/
+  .pagetitle h1, .pagetitlebis h1 {
+    font-size: 35px;
+  }
+
+  .pagetitle h6, .pagetitlebis h2 {
+    font-size: 15px;
+  }
+
+  /** Svg rectangle blanc **/
+  .pagetitleimage {
+    display: none;
+  }
+
+	/** Rectangle blanc (titre page) **/
+  .pagetitle {
+    padding: 20px 60px;
+    margin-top: 30px;
+    box-shadow: 0px 0px 8px rgba(0,0,0, 0.05);
+  }
+
+  .pagetitlebis{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 30px;
+    height: 170px;
+    width:65%;
+    padding:20px 60px;
+    margin-top: 30px;
+    box-shadow: 0px 0px 8px rgba(0,0,0, 0.05);
+  }
+
+  .titledouble{
+    display:none;
+  }
+}
+
+@media only screen and (min-width:700px) {
+
+	/** Texte rectangle blanc : titre **/
+  .pagetitle h1, .pagetitlebis h1 {
+    font-size: 47px;
+  }
+
+  /** Rectangle blanc (titre page) **/
+  .pagetitle{
+    padding: 0px 100px;
+    margin-top: 70px;
+  }
+
+  .pagetitlebis{
+    display:none;
+  }
+}
+
+
+
+/* ===============	Media queries petits ecrans	================= */
+
+@media only screen and (max-width:1430px) and (max-height:800px) and (min-width:700px)  {
+	#conteneur_menuhaut {
+		transform: scale(0.8);
+	}
+
+	#menu_haut {
+		height: 65px;
+		align-items: center;
+	}
+
+
+	#toggle {
+	  display: none;
+	}
+
+	label.hamburger {
+	  display: none;
+		cursor: none;
+	}
+
+	#page_principale {
+	  margin-left: 200px;
+	  border-radius: 35px 0 0 35px;
+	}
+
+	.menulogo {
+	  display: block;
+		transform: scale(0.8);
+		margin-top: -20px;
+	}
+
+	#menuheader {
+	  margin-top: 0;
+	}
+
+	#menu {
+	  display: flex;
+	}
+
+	.element_menu a {
+		width: 200px;
+	}
+
+
+	nav {
+		transform: scale(0.8);
+		margin-left: -30px;
+	}
+
+	.bas-menu {
+		transform: scale(0.8);
+		margin-left: -70px;
+		margin-top: -50px;
+	}
+
+	#conteneur_menuhaut select {
+		margin-left: -20px;
+	}
+
+  .texte_menuhaut {
+    margin-right: 20px;
+  }
+
+	.pagetitle {
+		transform: scale(0.85);
+		margin-top: 15px;
+    margin-left:-35px;
+    margin-right:-55px;
+	}
+
+	.pagetitleimage {
+    transform: scale(0.90);
+    padding-top:30px;
+		margin-right: -60px;
+	}
+
+	.pagetitleimage svg {
+	  height: 170px;
+	}
+
+	.pagetitle h1 {
+    font-size: 40px;
+  }
+
+	.pagetitle h6 {
+    font-size: 17px;
+  }
+
+  .page_left svg {
+    transform: scale(0.80);
+  }
+
+  .page_right {
+    padding-left:auto;
+    padding-right:auto;
+  }
+
+
+}

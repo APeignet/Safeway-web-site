@@ -1,0 +1,83 @@
+.bouton {
+    width: 40%;
+    height: 22%;
+    background-color: #5F5DFE;
+    /*background : linear-gradient(to right, #FF5DB4, #255AFF);*/
+    color: #fff;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+    text-decoration:none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 5px;
+    cursor: pointer;
+    border-radius:40px;
+    border: 2px solid #5F5DFE;
+    transition: background-color 0.3s ease;
+    transition-duration: 0.3s;
+  }
+.profil {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    width: 100%;
+    height:90%;
+    flex-wrap: wrap;
+    text-align: center;
+  
+}
+
+.Informations {
+    background-color: white;
+    height: 70%;
+    width: 45%;
+    border-radius: 2.5vw;
+    box-shadow: 0px 0px 30px rgba(0,0,0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 1.5%;
+    padding: 1.5%;
+  
+}
+.Informations h2 {
+    margin:3%;   
+    font-size:140%;
+
+}
+.Informations h3 {
+    margin:0;
+    opacity: 60%;
+    font-size:110%;
+
+}
+
+.Informations img {
+    margin-top: 10%;
+  width:60%;
+  height:60%;
+  border-radius: 30%;
+}
+
+.boutonprofil {
+    font-weight: bold;
+    align-self: center;
+    width: 150px;
+    height: 22px;
+    background-color: #5F5DFE;
+    color: #fff;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+    text-decoration:none;
+    display: inline-block;
+    font-size: 15px;
+   margin-top: 30%;
+    cursor: pointer;
+    border-radius:40px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    transition: background-color 0.3s ease;
+    margin-bottom: 50px;
+  }

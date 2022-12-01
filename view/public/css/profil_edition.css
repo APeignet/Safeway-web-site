@@ -1,0 +1,170 @@
+.principal{
+    text-align:center;
+	display:flex;
+	flex-direction: row;
+	flex-wrap:nowrap;
+	justify-content: center;
+}
+*:focus{
+	outline:none;
+}
+#selectedfile{
+	background-color :white;
+	border : 2px solid #605dfec4;
+	border-radius : 15px;
+	width:160px;
+	padding: 10px 20px;
+	font-family:'Quicksand', sans-serif;
+	font-size : 13px;
+	color : black;
+	resize: none;	
+	margin-top: 5px;
+}
+
+#selectedfile:hover {
+	background-color :#f5f5ff;
+
+}
+input[type="button"]{
+	background-color :#F9F9F9;
+	color : #605dfec4;
+	font-family:'Quicksand', sans-serif;
+	border : 1px solid #605dfec4;
+	border-radius : 30px;
+	padding: 5px 20px;
+	cursor:pointer;
+	font-size : 13px;
+	box-shadow: 0px 0px 40px rgba(0,0,0, 0.05);
+	margin-top:15px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+input[type="button"]:hover{
+	background-color :#f5f5ff;
+
+}
+.pdp{
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 100%;
+}
+.partie_gauche{
+	width:30%;
+	display:flex;
+	justify-content: flex-end;
+
+}
+.partie_droite{
+	width:50%;
+}
+.formulaire{
+
+	background-color :white;
+	border : 2px solid #605dfec4;
+	border-radius : 15px;
+	width:200px;
+	padding: 10px 20px;
+	font-family:'Quicksand', sans-serif;
+	font-size : 16px;
+	color : black;
+	resize: none;	
+	margin-bottom:10px;
+}
+
+.formulaire::placeholder{
+	color : #585858;
+}
+
+.formulaire:hover{
+	background-color :#f5f5ff;
+}
+
+.date:hover{
+	background-color :#f5f5ff;
+}
+
+input[type=submit]{
+	
+	background-color :#5F5DFE;
+	color : #F2F1FF;
+	font-family:'Quicksand', sans-serif;
+	border : 2px solid #605dfe00;
+	border-radius : 30px;
+	padding: 10px 30px;
+	margin-top : 5px;
+	cursor:pointer;
+	font-size : 15px;
+	box-shadow: 0px 0px 40px rgba(0,0,0, 0.05);
+	margin-top:25px;
+}
+
+input[type=submit]:hover {
+	
+	background-color :#4845e6;
+	color : #F2F1FF;
+	transition-duration: 0.4s;	
+	
+}
+
+@media only screen and (max-width:1430px) and (max-height:800px) and (min-width:700px) {
+
+	.description{
+		font-size:17px;
+	}
+
+	.titre {
+		font-size:27px;
+	}
+
+	.formulaire{
+
+		font-size : 13px;
+		width:150px;
+		border : 1.7px solid #605dfec4;
+	}
+	
+
+	input[type=submit]{
+		padding: 7px 30px;
+		font-size : 13px;
+	}
+
+	#selectedfile{
+		border : 1.7px solid #605dfec4;
+	}
+
+	
+}
+
+@media only screen and (max-width:700px) {
+
+	.description, .titre {
+		padding:0;
+		margin:0;
+		text-align : left;
+	}
+
+	.formulaire{
+		font-size : 13px;
+		width:150px;
+		border : 1.7px solid #605dfec4;
+	}
+	
+	.date{
+		
+		width: 150px;
+		font-size : 13px;
+		border : 1.7px solid #605dfec4;
+	}
+
+	input[type=submit]{
+		padding: 7px 30px;
+		font-size : 13px;
+	}
+
+	#passwordlabel {
+		
+		font-size: 10px;
+	}
+
+}

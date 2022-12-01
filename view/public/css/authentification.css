@@ -1,0 +1,200 @@
+/*Authentification.css Par Kevin Chhoa*/
+
+/** Police **/
+@import url('https://fonts.googleapis.com/css?family=Lato|Quicksand');
+
+* {
+	font-family: "Quicksand", sans-serif;
+	scroll-behavior: smooth;
+	outline: none;
+}
+
+*:focus{
+	outline:none;
+}
+
+body {
+
+	margin:0;
+	padding: 0;
+	height : 100%;
+	width : 100%;
+	overflow: auto;
+}
+
+.langue{
+	text-align: right;
+	width:100%;
+	height:25%;
+}
+
+.ok{
+	color: #5F5DFE;
+	font-size:13px;
+	font-weight: bold;
+}
+
+.error{
+	color: #D8000C;
+	font-size:13px;
+	font-weight: bold;
+}
+
+/** selecteur de langue **/
+.langue select {
+	background-color: #5F5DFE;
+	border-radius: 30px;
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: bold;
+	height: 40px;
+	width: 150px;
+	margin: 23px 100px;
+    padding-left: 30px;
+	margin-right: 100px;
+	padding-right: 0;
+	position: relative;
+	z-index: 2;
+	font-family: "Quicksand", sans-serif;
+	font-size: 15px;
+  
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="white" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>');
+	background-position: right 18px top 50%;
+	background-repeat: no-repeat;
+	background-size: 10px;
+  }
+  
+/** Titre "Authentification" **/
+h1 {
+    font-family:'Quicksand', sans-serif;
+    text-align: center;
+    font-size: 2.5vw;
+}
+
+/** "Bienvenue ..." **/
+p {
+    font-family:'Quicksand', sans-serif;
+    font-size:1.2vw;
+    text-align: center;
+}
+
+/** Mettre en valeur le nom **/
+#nom {
+	color :#5F5DFE;
+	font-weight : bold;
+}
+
+/** Mise en forme des boutons **/
+input[type=submit]{
+	background-color :#5F5DFE;
+	color : #F2F1FF;
+	font-family:'Quicksand', sans-serif;
+	border : 2px solid #605dfe00;
+	border-radius : 30px;
+	padding: 10px 30px;
+	margin-top : 5px;
+	cursor:pointer;
+	font-size : 15px;
+	box-shadow: 0px 0px 40px rgba(0,0,0, 0.05);
+	margin:auto;
+	font-weight: bold;
+	margin-bottom: 0.8%;
+}
+
+input[type=button] {
+	background-color :#5F5DFE;
+	color : #F2F1FF;
+	font-family:'Quicksand', sans-serif;
+	border : 2px solid #605dfe00;
+	border-radius : 30px;
+	padding: 10px 30px;
+	margin-top : 5px;
+	cursor:pointer;
+	font-size : 15px;
+	box-shadow: 0px 0px 40px rgba(0,0,0, 0.05);
+	margin:auto;
+	font-weight: bold;
+}
+
+.mdpoublie{
+	color:#5F5DFE;
+}
+
+input[type=submit]:hover , input[type=button]:hover {
+	
+	background-color :#4845e6;
+	color : #F2F1FF;
+	transition-duration: 0.4s;	
+}
+
+.paragraphe {
+	margin-bottom: 30px;
+}
+
+/** Mise en forme des formulaires **/
+
+.formulaire{
+	background-color :white;
+	border : 2px solid #605dfec4;
+	border-radius : 15px;
+	width:200px;
+	padding: 10px 20px;
+	font-family:'Quicksand', sans-serif;
+	font-size : 16px;
+	color : black;
+	resize: none;	
+	margin-bottom:10px;
+}
+
+.formulaire::placeholder{
+	color : #585858;
+}
+
+/** Formulaires survolés **/
+.formulaire:hover{
+	background-color :#f5f5ff;
+}
+
+
+.authentification{
+	display:flex;
+	flex-wrap: space-between;
+	flex-direction: column;
+	text-align:center;
+
+}
+
+.error {
+	font-size: 13px;
+	color : red;
+}
+
+#modif_mdp {
+	font-size: 15px;
+	color : #5F5DFE;
+}
+
+@media only screen and (max-width:700px){
+
+	h1 {
+		font-size: 30px;
+	}
+
+	p {
+		font-size: 20px;
+	}
+
+	.langue select {
+		margin-right: 20px;
+	}
+
+	input[type=submit]{
+		margin-bottom: 1.5%;
+	}
+}
+

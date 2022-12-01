@@ -1,0 +1,204 @@
+/*Contact.css Par Kevin Chhoa*/
+
+/** Police **/
+@import url('https://fonts.googleapis.com/css?family=Lato|Quicksand');
+
+
+/** Taille de l'image **/
+.logo_contact {
+	width: 100%;
+	height: 100%;
+}
+
+/** Page principale non fixe**/
+body {
+    overflow-y:scroll;
+}
+
+*:focus{
+	outline:none;
+}
+
+/** Titre "Contactez-nous !" **/
+h1 {
+    font-family:'Quicksand', sans-serif;
+    text-align: center;
+    font-size:2.5vw;
+}
+
+/** "Pour contacter...." **/
+p {
+    font-family:'Quicksand', sans-serif;
+    text-justify:center;
+    font-size:1.2vw;
+	text-align: center;
+}
+
+/** Mettre en valeur le nom **/
+span {
+	color :#5F5DFE;
+	font-weight : bold;
+}
+
+/** Aligner les deux boîtes des formulaires **/
+.conteneur_contact {
+	display: flex;
+	flex-direction: row;
+	margin-left: 15px;
+}
+
+/** Aligner les conteneurs prénom+nom et problème+email **/
+.conteneur1, .conteneur2{
+    display:flex;
+	flex-grow: 1;
+    flex-direction:column;
+    flex-wrap: nowrap;
+	width: 50%;
+	justify-content:space-around;
+}
+
+/** Mise en forme des boutons **/
+input[type=submit]{
+	background-color :#5F5DFE;
+	color : #F2F1FF;
+	font-family:'Quicksand', sans-serif;
+	border : 2px solid #605dfe00;
+	border-radius : 30px;
+	padding: 10px 30px;
+	margin-top : 5px;
+	cursor:pointer;
+	font-size : 15px;
+	box-shadow: 0px 0px 40px rgba(0,0,0, 0.05);
+	margin-top:25px;
+	text-align: center;
+}
+.bouton_submit {
+	text-align: center;
+}
+
+
+/** Mise en forme des boutons survolés **/
+input[type=submit]:hover {
+	background-color :#4845e6;
+	color : #F2F1FF;
+	transition-duration: 0.4s;
+}
+
+/** Mise en forme des boutons quand on clique dessus**/
+input[type=submit]:focus {
+    outline:none;
+}
+
+
+
+/** Mise en forme des noms des formulaires**/
+label {
+    font-family:'Quicksand', sans-serif;
+	text-align: center;
+	font-weight : bold;
+    font-size:1.1vw;
+
+}
+
+/** Mise en forme des formulaires**/
+ #grosformulaire{
+    justify-content: center;
+    font-family:'Quicksand', sans-serif;
+	background-color :white;
+	border : 2px solid #605dfec4;
+	border-radius : 15px;
+	padding: 0.7vw 2vw;
+	margin-top : 0.1vw;
+	margin-bottom : 0.1vw;
+	font-size : 15px;
+	width:83%;
+	color : black;
+	margin-left: 15px;
+
+
+}
+.formulaire{
+	background-color :white;
+	border : 2px solid #605dfec4;
+	border-radius : 15px;
+	width:70%;
+	padding: 0.7vw 2vw;
+	font-family:'Quicksand', sans-serif;
+	font-size : 16px;
+	color : black;
+	resize: none;	
+	margin-bottom:0.1vwpx;
+}
+
+
+/** Mise en forme de la boîte message**/
+.message {
+    justify-content: center;
+    font-family:'Quicksand', sans-serif;
+}
+.formulaire::placeholder, #grosformulaire{
+	color : #585858;
+}
+
+/** Mise en forme du formulaire survolé**/
+.formulaire:hover{
+	background-color :#E6E6FA;
+}
+
+
+/****** Issue = liste des problèmes ******/
+
+#issue {
+	justify-content: center;
+    font-family:'Quicksand', sans-serif;
+	background-color : white;
+	border : 2px solid #605dfec4;
+	border-radius : 15px;
+	padding: 0.7vw 2vw;
+	margin-top : 0.1vw;
+	margin-bottom : 0.1vw;
+	font-size : 16px;
+	width:95%;
+	color:black;
+}
+
+@media only screen and (max-width:700px) {
+
+
+.page_right{
+	display: flex;
+	flex-wrap:nowrap;
+}
+.conteneur_contact{
+	width:100%;
+}
+.formulaire, #grosformulaire{
+	font-size : 13px;
+	width:140px;
+	border : 1.7px solid #605dfec4;
+}
+#issue{
+	font-size : 13px;
+	width:170px;
+	border : 1.7px solid #605dfec4;
+}
+#grosformulaire{
+	width: 90%;
+}
+input[type=submit]{
+	padding: 7px 30px;
+	font-size : 13px;
+}
+h1{
+	font-size:20px;
+}
+
+p{
+	font-size: 15px;
+}
+
+label{
+	font-size: 13px;
+}
+
+}

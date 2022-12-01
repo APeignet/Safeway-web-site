@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Quicksand');
+
+/******** RAJOUT POUR LE MIEN ********/
+.boutonR {
+  width: 100%;
+  height: 22%;
+  background-color: #5F5DFE;
+  /*background : linear-gradient(to right, #FF5DB4, #255AFF);*/
+  color: #fff;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: center;
+  text-decoration:none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 5px;
+  cursor: pointer;
+  border-radius:40px;
+  border: 2px solid #5F5DFE;
+  transition: background-color 0.3s ease;
+  transition-duration: 0.3s;
+}
+
+.gestionnaire {
+	display: flex;
+	justify-content: space-around; 
+}
+.gestionnaire-element {
+  background-color: white;
+  height: 50%;
+  width: 13%;
+  border-radius: 2.5vw;
+  box-shadow: 0px 0px 30px rgba(0,0,0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 1.5%;
+  padding: 1.5%;
+  font-family:'Quicksand', sans-serif;
+  text-align: center; 
+
+}
+
+.gestionnaire-element h4 {
+	margin: 0;
+  font-size: 110%;
+  font-family:'Quicksand', sans-serif;
+}
+
+.gestionnaire-element h5{
+  margin: 0;
+  font-size: 110%;
+  opacity: 40%;
+  font-family:'Quicksand', sans-serif;
+
+}
+
+h2{
+	font-family:'Quicksand', sans-serif;
+}
+button{
+	font-family:'Quicksand', sans-serif;
+	background-color: #5f5dfe;
+	border-color: #5f5dfe;
+  border-radius: 30px; 
+  border-style: solid;
+  color : white;
+  height: 40px;
+  width: 100px;
+}
+
+select{
+  border-radius: 40px; 
+  height: 40px;
+  width: 140px;
+  padding-left: 20px;
+  border-style: solid;
+  background-color: #F7F7FF;
+  border-color: #F7F7FF;
+  color : #959599;
+}
+
+
+@media (max-width: 800px) {
+
+  .gestionnaire{
+    display : block;
+  }
+
+  .gestionnaire-element {
+      height: 80%;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}

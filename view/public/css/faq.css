@@ -1,0 +1,321 @@
+/******** FAQ ********/
+input[type="checkbox"] {
+	display:none;
+	
+}
+ol {
+	margin:0;
+	padding:0;
+	font-size:20px;
+	list-style-type: none;
+}
+
+section {
+	background-color: white;
+	margin-top:15px;
+	border-radius:30px;
+	display:table;
+	padding:10px 30px;
+	box-shadow: 0px 0px 40px rgba(0,0,0, 0.05);
+	width: 95%;
+}
+
+#section1 {
+	display:block;
+}
+#section2 {
+	display:block;
+}
+#section3 {
+	display:block;
+}
+#section4 {
+	display:block;
+}
+#section5 {
+	display:none;
+}
+#section6 {
+	display:none;
+}
+#section7 {
+	display:none;
+}
+#section8 {
+	display:none;
+}
+#section9 {
+	display:none;
+}
+#section10 {
+	display:none;
+}
+#section11 {
+	display:none;
+}
+#section12 {
+	display:none;
+}
+#section13 {
+	display:none;
+}
+#section14 {
+	display:none;
+}
+#section15 {
+	display:none;
+}
+#section16 {
+	display:none;
+}
+
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	margin-top:35px;
+}
+  
+.pagination a  {
+	color: black;
+	float: left;
+	padding: 8px 15px;
+	text-decoration:none;
+	border-radius:40px;
+	cursor: pointer;
+	
+}
+.pagination a:hover {
+	background-color: #ddd;	
+}
+  
+#page1 {
+	background-color: #5F5DFE;
+	color: white;
+}
+  
+#cote1 {
+	visibility: hidden;
+	
+}
+#cote2 {
+	
+	visibility: hidden;
+}
+#cote3 {
+	display:block;
+}
+#cote4 {
+	visibility:hidden;
+}
+
+.souslabel {
+	display:flex;
+	align-items: center;
+}
+
+.question svg {
+    margin-top: -.235ex;
+    vertical-align: middle;
+	margin-right:40px;
+}
+.question {
+	font-size : 20px;
+	font-family:'Quicksand', sans-serif;
+	font-weight:bold;
+	display: table-cell;
+	border-spacing: 40px;
+	margin:auto;
+}
+
+
+.question::before{
+	display: block;
+
+}
+
+.question::after {
+	display: none;
+}
+input:checked + .question::after {
+	display: block;
+}
+
+
+p {
+	font-size : 18px;
+	font-family:'Quicksand', sans-serif;
+	display: none;
+}
+
+
+
+#checkbox1:checked ~ .blocked {
+	display: none;
+}
+  
+#checkbox1:checked ~ p {
+	display: table-row;
+}
+
+#checkbox2:checked ~ .blocked {
+	display: none;
+}
+  
+#checkbox2:checked ~ p {
+	display: table-row;
+}
+#checkbox3:checked ~ .blocked {
+	display: none;
+}
+  
+#checkbox3:checked ~ p {
+	display: table-row;
+}
+#checkbox4:checked ~ .blocked {
+	display: none;
+}
+  
+#checkbox4:checked ~ p {
+	display: table-row;
+}
+#checkbox5:checked ~ .blocked {
+	display: none;
+}
+  
+#checkbox5:checked ~ p {
+	display: table-row;
+}
+#checkbox6:checked ~ .blocked {
+	display: none;
+}
+  
+#checkbox6:checked ~ p {
+	display: table-row;
+}
+#checkbox7:checked ~ .blocked {
+	display: none;
+}
+  
+#checkbox7:checked ~ p {
+	display: table-row;
+}
+#checkbox8:checked ~ .blocked {
+	display: none;
+}
+  
+#checkbox8:checked ~ p {
+	display: table-row;
+}
+#checkbox9:checked ~ .blocked {
+	display: none;
+}
+  
+#checkbox9:checked ~ p {
+	display: table-row;
+}
+#checkbox10:checked ~ .blocked {
+	display: none;
+}
+  
+#checkbox10:checked ~ p {
+	display: table-row;
+}
+#checkbox11:checked ~ .blocked {
+	display: none;
+}
+  
+#checkbox11:checked ~ p {
+	display: table-row;
+}
+#checkbox12:checked ~ .blocked {
+	display: none;
+}
+  
+#checkbox12:checked ~ p {
+	display: table-row;
+}
+
+.lien_titre {
+	color:black;
+	font-weight:bold;
+}
+
+.lien_titre:hover {
+	color:#5F5DFE;
+}
+
+
+.lien_reponse {
+	color:black;
+}
+
+.lien_reponse:hover {
+	color:#635fcc;
+}
+
+@media screen and (max-width:700px) {
+
+	ol{
+		padding-right:40px;
+	}
+
+	.question {
+		font-size: 15px;
+	}
+
+	p{
+		font-size: 13px;
+	}
+	
+
+	.question svg {
+		height:30px;
+	}
+
+	section{
+		box-shadow: 0px 0px 8px rgba(0,0,0, 0.05);
+	}
+
+	.pagination {
+		margin-top:20px;
+		margin-bottom:10px;
+	}
+
+	.pagination a {
+		font-size: 13px;
+	}
+
+}
+
+@media only screen and (max-width:1430px) and (max-height:800px) and (min-width:700px) {
+	ol{
+		transform: scale(0.85);
+    	margin-left:-35px;
+    	margin-right:-55px;
+		margin-top:-25px;
+	}
+
+	.question {
+		font-size: 20px;
+	}
+
+	p{
+		font-size: 16px;
+	}
+	
+
+	.question svg {
+		height:50px;
+	}
+
+	section{
+		box-shadow: 0px 0px 8px rgba(0,0,0, 0.05);
+	}
+
+	.pagination {
+		margin-top:20px;
+		margin-bottom:10px;
+	}
+	
+}
